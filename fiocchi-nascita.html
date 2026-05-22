@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <title>Fiocchi nascita · Le coin de l’artiste</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --bg: #F9F5FF;          /* lilla chiarissimo */
+      --bg2: #F4ECFF;
+      --text: #2B2230;
+      --accent: #C46ACB;      /* lilla acceso */
+      --accent2: #FF9F3C;     /* arancione */
+      --accent3: #FFD94A;     /* giallo */
+      --cream: #FFFDF7;
+      --muted: #7B6E86;
+      --border: rgba(196,106,203,0.18);
+      --dark: #1C1420;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Manrope', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      overflow-x: hidden;
+    }
+
+    ::selection {
+      background: var(--accent2);
+      color: var(--cream);
+    }
+
+    /* FOOTER */
+    footer {
+      padding: 26px 48px 32px;
+      border-top: 1px solid var(--border);
+      display: flex; justify-content: space-between; align-items: center;
+      font-size: 11px;
+      color: var(--muted);
+      letter-spacing: 1px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+    footer .footer-brand {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 14px;
+      font-style: italic;
+    }
+
+    /* GALLERY */
+    .gallery-section {
+      padding: 120px 0;
+      overflow: hidden;
+      background: var(--bg2);
+    }
+    .gallery-section .section-wrapper { margin-bottom: 48px; }
+    
+	@media (max-width: 700px) {
+      nav { padding: 18px 22px; }
+      nav.scrolled { padding: 14px 22px; }
+      .hero { padding: 130px 22px 80px; }
+      .section-wrapper { padding: 0 22px; }
+      section { padding: 80px 0; }
+      .categories-grid { grid-template-columns: 1fr; }
+      footer { padding: 22px; flex-direction: column; gap: 8px; text-align: center; }
+      .scroll-indicator { display: none; }
+    }
+
+    /* Freccia indietro */
+    .back-arrow {
+      position: fixed;
+      top: 22px;
+      left: 22px;
+      z-index: 200;
+      font-size: 26px;
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 300;
+      transition: opacity .3s, transform .3s;
+    }
+    .back-arrow:hover {
+      opacity: .7;
+      transform: translateX(-4px);
+    }
+
+    /* Hero semplice */
+    .sub-hero {
+      padding: 160px 22px 80px;
+      text-align: center;
+    }
+    .sub-hero-title {
+  font-family: 'Cinzel', serif;
+  font-weight: 600;
+  font-size: clamp(46px, 10vw, 86px);
+  color: var(--accent2);
+  margin-bottom: 18px; /* elegante, equilibrato */
+}
+    .sub-hero-sub {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 20px;
+      font-style: italic;
+      color: var(--muted);
+      margin-bottom: 26px;
+    }
+    .sub-hero-divider {
+      width: 46px;
+      height: 1px;
+      background: linear-gradient(90deg,var(--accent),var(--accent2),var(--accent3));
+      margin: 0 auto 32px;
+    }
+    .sub-hero-desc {
+      max-width: 620px;
+      margin: 0 auto;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 20px;
+      line-height: 1.7;
+      color: var(--muted);
+    }
+	
+#bodypage {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 22px;
+}
+
+/* Griglia immagini 2 colonne */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 22px;
+  margin-top: 40px;
+}
+
+/* Box immagine */
+.gallery-item {
+  width: 100%;
+  aspect-ratio: 3 / 4; /* quadrato elegante */
+  overflow: hidden;
+  border-radius: 6px;
+  background: #fff;
+  border: 1px solid rgba(0,0,0,0.08);
+  transition: transform .35s cubic-bezier(0.22,1,0.36,1), 
+              box-shadow .35s cubic-bezier(0.22,1,0.36,1);
+}
+
+/* Effetto hover premium */
+.gallery-item:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 40px rgba(0,0,0,0.08);
+}
+
+/* Immagine */
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform .5s cubic-bezier(0.22,1,0.36,1);
+}
+
+.gallery-item:hover img {
+  transform: scale(1.04);
+}
+
+/* PC: box più piccoli */
+@media (min-width: 900px) {
+  .gallery-grid {
+    max-width: 700px;      /* restringe la colonna */
+    margin: 0 auto;        /* centra tutto */
+    gap: 18px;
+  }
+
+  .gallery-item {
+    aspect-ratio: 5 / 7;   /* ancora più verticale e elegante */
+  }
+}
+
+
+/* Mobile: 1 colonna */
+@media (max-width: 700px) {
+  /* Titolo principale */
+  .sub-hero-title {
+    font-size: clamp(32px, 9vw, 54px);
+    line-height: 1.05;
+  }
+
+  /* Sottotitolo */
+  .sub-hero-sub {
+    font-size: 16px;
+    letter-spacing: 0.5px;
+  }
+
+  /* Testo descrizione */
+  .sub-hero-desc {
+    font-size: 16px;
+    line-height: 1.6;
+  }
+}
+
+
+  </style>
+</head>
+
+<body>
+
+  <!-- Freccia indietro -->
+  <a href="index.html" class="back-arrow">←</a>
+
+<!-- HERO -->
+<section class="sub-hero">
+  <h1 class="sub-hero-title">Fiocchi nascita</h1>
+  <p class="sub-hero-sub">Dolci creazioni per dare il benvenuto</p>
+  <div class="sub-hero-divider"></div>
+  <p class="sub-hero-desc">
+    Una selezione di fiocchi nascita realizzati a mano da Maria Pia:
+    dettagli delicati, colori armoniosi e un tocco unico per celebrare un momento speciale.
+  </p>
+</section>
+
+<div id="bodypage">
+
+  <div class="gallery-grid">
+
+    <div class="gallery-item">
+      <img src="https://i.postimg.cc/zXm46P5L/Fiocchi1.jpg" alt="">
+    </div>
+
+    <div class="gallery-item">
+      <img src="https://i.postimg.cc/9QbS4m9c/Porta2.jpg" alt="">
+    </div>
+
+    <div class="gallery-item">
+      <img src="https://i.postimg.cc/Lhdszzb7/Img10.jpg" alt="">
+    </div>
+
+    <div class="gallery-item">
+      <img src="https://i.postimg.cc/mDB5MB4x/Fiocchi4.webp" alt="">
+    </div>
+
+    <div class="gallery-item">
+      <img src="https://i.postimg.cc/gJmTRmpF/Fiocchi5.jpg" alt="">
+    </div>
+
+    <div class="gallery-item">
+      <img src="https://i.postimg.cc/fLDrXDNG/Fiocchi6.jpg" alt="">
+    </div>
+
+    <div class="gallery-item">
+      <img src="https://i.postimg.cc/pdDSpywR/Fiocchi7.jpg" alt="">
+    </div>
+
+    <div class="gallery-item">
+      <img src="https://i.postimg.cc/QMpzHV2G/Fiocchi8.jpg" alt="">
+    </div>
+
+    <div class="gallery-item">
+      <img src="https://i.postimg.cc/LszWnhcM/Fiocchi9.jpg" alt="">
+    </div>
+
+    <div class="gallery-item">
+      <img src="https://i.postimg.cc/pdDSpywM/Fiocchi10.jpg" alt="">
+    </div>
+
+  </div>
+
+</div>
+
+</div>
+
+
+</div>
+
+
+  <footer>
+    <div class="footer-brand">©Le coin de l’artiste – Maria Pia</div>
+    <div>Feltro · Pannolenci · Creazioni fatte a mano</div>
+  </footer>
+
+</body>
+</html>

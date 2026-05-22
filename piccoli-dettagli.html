@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <title>Piccoli dettagli · Le coin de l’artiste</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --bg: #F9F5FF;
+      --bg2: #F4ECFF;
+      --text: #2B2230;
+      --accent: #C46ACB;
+      --accent2: #FF9F3C;
+      --accent3: #FFD94A;
+      --cream: #FFFDF7;
+      --muted: #7B6E86;
+      --border: rgba(196,106,203,0.18);
+      --dark: #1C1420;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Manrope', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      overflow-x: hidden;
+    }
+
+    ::selection {
+      background: var(--accent2);
+      color: var(--cream);
+    }
+
+    footer {
+      padding: 26px 48px 32px;
+      border-top: 1px solid var(--border);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 11px;
+      color: var(--muted);
+      letter-spacing: 1px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+    footer .footer-brand {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 14px;
+      font-style: italic;
+    }
+
+    .back-arrow {
+      position: fixed;
+      top: 22px;
+      left: 22px;
+      z-index: 200;
+      font-size: 26px;
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 300;
+      transition: opacity .3s, transform .3s;
+    }
+    .back-arrow:hover {
+      opacity: .7;
+      transform: translateX(-4px);
+    }
+
+    .sub-hero {
+      padding: 160px 22px 80px;
+      text-align: center;
+    }
+    .sub-hero-title {
+  font-family: 'Cinzel', serif;
+  font-weight: 600;
+  font-size: clamp(46px, 10vw, 86px);
+  color: var(--accent2);
+  margin-bottom: 18px; /* elegante, equilibrato */
+}
+
+
+
+    .sub-hero-sub {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 20px;
+      font-style: italic;
+      color: var(--muted);
+      margin-bottom: 26px;
+    }
+    .sub-hero-divider {
+      width: 46px;
+      height: 1px;
+      background: linear-gradient(90deg,var(--accent),var(--accent2),var(--accent3));
+      margin: 0 auto 32px;
+    }
+    .sub-hero-desc {
+      max-width: 620px;
+      margin: 0 auto;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 20px;
+      line-height: 1.7;
+      color: var(--muted);
+    }
+
+    #bodypage {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 22px 80px;
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 22px;
+      margin-top: 40px;
+    }
+
+    .gallery-item {
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      overflow: hidden;
+      border-radius: 6px;
+      background: #fff;
+      border: 1px solid rgba(0,0,0,0.08);
+      transition: transform .35s cubic-bezier(0.22,1,0.36,1),
+                  box-shadow .35s cubic-bezier(0.22,1,0.36,1);
+    }
+
+    .gallery-item:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 18px 40px rgba(0,0,0,0.08);
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform .5s cubic-bezier(0.22,1,0.36,1);
+    }
+
+    .gallery-item:hover img {
+      transform: scale(1.04);
+    }
+
+    @media (max-width: 700px) {
+      .sub-hero-title {
+        font-size: clamp(32px, 9vw, 54px);
+        line-height: 1.05;
+      }
+      .sub-hero-sub {
+        font-size: 16px;
+        letter-spacing: 0.5px;
+      }
+      .sub-hero-desc {
+        font-size: 16px;
+        line-height: 1.6;
+      }
+      
+      footer {
+        padding: 22px;
+        flex-direction: column;
+        gap: 8px;
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <a href="index.html" class="back-arrow">←</a>
+
+  <section class="sub-hero">
+    <h1 class="sub-hero-title">Piccoli dettagli</h1>
+    <p class="sub-hero-sub">Fiori e particolari che completano ogni creazione</p>
+    <div class="sub-hero-divider"></div>
+    <p class="sub-hero-desc">
+      Una selezione di piccoli dettagli floreali realizzati a mano da Maria Pia:
+      elementi che arricchiscono ghirlande, bouquet e addobbi con un tocco unico e personale.
+    </p>
+  </section>
+
+  <div id="bodypage">
+    <div class="gallery-grid">
+
+      <div class="gallery-item">
+        <img src="https://i.postimg.cc/W44ygBmn/Fiori1.jpg" alt="">
+      </div>
+
+      <div class="gallery-item">
+        <img src="https://i.postimg.cc/QMMz12g5/Fiori2.jpg" alt="">
+      </div>
+
+      <div class="gallery-item">
+        <img src="https://i.postimg.cc/DzzNL9QG/Fiori3.jpg" alt="">
+      </div>
+
+      <div class="gallery-item">
+        <img src="https://i.postimg.cc/JhhFZf3H/Fiori4.jpg" alt="">
+      </div>
+
+      <div class="gallery-item">
+        <img src="https://i.postimg.cc/sgm8BjWY/Fiori5.jpg" alt="">
+      </div>
+
+      <div class="gallery-item">
+        <img src="https://i.postimg.cc/J4bSLc4t/Fiori6.jpg" alt="">
+      </div>
+
+      <div class="gallery-item">
+        <img src="https://i.postimg.cc/8zxNgJS7/Fiori7.jpg" alt="">
+      </div>
+
+      <div class="gallery-item">
+        <img src="https://i.postimg.cc/bw4pfDhY/Fiori8.jpg" alt="">
+      </div>
+
+      <div class="gallery-item">
+        <img src="https://i.postimg.cc/XYt46Gb7/Fiori9.jpg" alt="">
+      </div>
+
+      <div class="gallery-item">
+        <img src="https://i.postimg.cc/sgMsLPtC/Fiori10.jpg" alt="">
+      </div>
+
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-brand">©Le coin de l’artiste – Maria Pia</div>
+    <div>Feltro · Pannolenci · Creazioni fatte a mano</div>
+  </footer>
+
+</body>
+</html>

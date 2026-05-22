@@ -1,0 +1,1341 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Le coin de l’artiste – Maria Pia</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&family=Manrope:wght@200;300;400;500;600&family=Dancing+Script:wght@400;500;600;700&display=swap" rel="stylesheet">
+ 
+ 
+ <meta name="description" content="Oggettistica artigianale realizzata a mano: creazioni uniche, personalizzate e curate nei dettagli. Idee regalo, decorazioni, articoli creativi e pezzi originali per ogni occasione. Qualità, stile e artigianalità italiana.">
+
+
+
+<link rel="apple-touch-icon" sizes="180x180" href="https://i.postimg.cc/tR8dr80F/Logo-Maria.png">
+
+<meta property="og:title" content="Le coin de l’artiste – Maria Pia">
+<meta property="og:description" content="Creazioni artigianali fatte a mano: oggetti unici, personalizzati e perfetti come idee regalo. Artigianalità italiana, cura dei dettagli e stile.">
+<meta property="og:image" content="https://i.postimg.cc/tR8dr80F/Logo-Maria.png">
+<meta property="og:url" content="https://maria-pia.vercel.app/">
+<meta property="og:type" content="website">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Le coin de l’artiste – Maria Pia">
+<meta name="twitter:description" content="Oggetti fatti a mano, personalizzati e curati nei dettagli. Idee regalo e decorazioni artigianali.">
+<meta name="twitter:image" content="https://i.postimg.cc/tR8dr80F/Logo-Maria.png">
+
+<link rel="icon" type="image/png" href="https://i.postimg.cc/tR8dr80F/Logo-Maria.png">
+
+<meta name="robots" content="index, follow">
+
+<meta name="theme-color" content="#c47dd1">
+
+<link rel="canonical" href="https://maria-pia.vercel.app/">
+
+<meta name="author" content="Kevin Dickson">
+<link rel="preconnect" href="https://maria-pia.vercel.app">
+
+<meta name="keywords" content="oggettistica artigianale, creazioni fatte a mano, idee regalo, decorazioni, artigianato, handmade, oggetti personalizzati, artigianato italiano, Maria Pia">
+
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Store",
+  "name": "Le coin de l’artiste – Maria Pia",
+  "image": "https://i.postimg.cc/tR8dr80F/Logo-Maria.png",
+  "url": "https://maria-pia.vercel.app/",
+  "description": "Creazioni artigianali fatte a mano: oggetti unici, personalizzati e perfetti come idee regalo.",
+
+  "sameAs": [
+    "https://www.facebook.com/profile.php?id=61556707804117"
+  ]
+}
+</script> 
+   
+ <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --bg: #F9F5FF;          /* lilla chiarissimo */
+      --bg2: #F4ECFF;
+      --text: #2B2230;
+      --accent: #C46ACB;      /* lilla acceso */
+      --accent2: #FF9F3C;     /* arancione */
+      --accent3: #FFD94A;     /* giallo */
+      --cream: #FFFDF7;
+      --muted: #7B6E86;
+      --border: rgba(196,106,203,0.18);
+      --dark: #1C1420;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Manrope', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      overflow-x: hidden;
+    }
+
+    ::selection {
+      background: var(--accent2);
+      color: var(--cream);
+    }
+
+    /* NAV */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0;
+      padding: 22px 48px;
+      display: flex; justify-content: space-between; align-items: center;
+      z-index: 100;
+      transition: background 0.4s, border-color 0.4s, padding 0.3s;
+      border-bottom: 1px solid transparent;
+    }
+    nav.scrolled {
+      background: rgba(249,245,255,0.9);
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+      border-bottom-color: var(--border);
+      padding: 16px 48px;
+    }
+    .nav-logo {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 500;
+      font-size: 20px;
+      letter-spacing: 1px;
+      color: var(--text);
+    }
+    .nav-logo span {
+      color: var(--accent);
+      font-style: italic;
+    }
+    .nav-right {
+      display: flex; align-items: center; gap: 32px;
+    }
+    .nav-links {
+      display: flex; gap: 24px; list-style: none;
+    }
+    .nav-links a {
+      font-size: 11px;
+      font-weight: 400;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--muted);
+      text-decoration: none;
+      position: relative;
+      transition: color 0.3s;
+    }
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      bottom: -4px; left: 0;
+      width: 0; height: 1px;
+      background: linear-gradient(90deg,var(--accent),var(--accent2));
+      transition: width 0.35s cubic-bezier(0.22,1,0.36,1);
+    }
+    .nav-links a:hover {
+      color: var(--accent);
+    }
+    .nav-links a:hover::after {
+      width: 100%;
+    }
+
+    .nav-toggle {
+      width: 28px; height: 18px;
+      position: relative; cursor: pointer;
+      display: none; flex-direction: column; justify-content: space-between;
+    }
+    .nav-toggle span {
+      display: block; width: 100%; height: 1px;
+      background: var(--text);
+      transition: all 0.4s cubic-bezier(0.76,0,0.24,1);
+    }
+    .nav-toggle.active span:nth-child(1) { transform: translateY(8.5px) rotate(45deg); }
+    .nav-toggle.active span:nth-child(2) { opacity: 0; }
+    .nav-toggle.active span:nth-child(3) { transform: translateY(-8.5px) rotate(-45deg); }
+
+    /* MENU OVERLAY */
+    .menu-overlay {
+      position: fixed; inset: 0;
+      background: var(--dark);
+      z-index: 90;
+      display: flex; align-items: center; justify-content: center;
+      opacity: 0; pointer-events: none;
+      transition: opacity 0.6s cubic-bezier(0.76,0,0.24,1);
+    }
+    .menu-overlay.open { opacity: 1; pointer-events: all; }
+    .menu-links { list-style: none; text-align: center; }
+    .menu-links li { overflow: hidden; margin: 6px 0; }
+    .menu-links a {
+      display: inline-block;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(32px, 6vw, 60px);
+      font-weight: 300;
+      color: var(--cream);
+      text-decoration: none;
+      transform: translateY(120%);
+      transition: transform 0.7s cubic-bezier(0.76,0,0.24,1), color 0.3s;
+    }
+    .menu-overlay.open .menu-links a { transform: translateY(0); }
+    .menu-links li:nth-child(1) a { transition-delay: 0.08s; }
+    .menu-links li:nth-child(2) a { transition-delay: 0.14s; }
+    .menu-links li:nth-child(3) a { transition-delay: 0.2s; }
+    .menu-links li:nth-child(4) a { transition-delay: 0.26s; }
+    .menu-links li:nth-child(5) a { transition-delay: 0.32s; }
+    .menu-links li:nth-child(6) a { transition-delay: 0.38s; }
+    .menu-links li:nth-child(7) a { transition-delay: 0.44s; }
+    .menu-links a:hover { color: var(--accent3); }
+
+    /* HERO */
+    .hero {
+      min-height: 100vh;
+      display: flex; flex-direction: column; justify-content: center; align-items: center;
+      text-align: center;
+      padding: 50px 40px 100px;
+      position: relative;
+    }
+
+.hero-logo {
+  width: 160px;              /* dimensione equilibrata */
+  height: auto;
+  margin-bottom: 24px;       /* spazio sotto il logo */
+}
+
+    .float-circle {
+      position: absolute;
+      border-radius: 50%;
+      border: 1px solid var(--border);
+      pointer-events: none;
+      animation: floatAnim 8s ease-in-out infinite;
+    }
+    .float-circle:nth-child(1) {
+      width: 220px; height: 220px;
+      top: 12%; right: 10%;
+      background: radial-gradient(circle at 30% 20%, rgba(255,217,74,0.4), transparent 60%);
+    }
+    .float-circle:nth-child(2) {
+      width: 140px; height: 140px;
+      bottom: 18%; left: 8%;
+      background: radial-gradient(circle at 60% 70%, rgba(255,159,60,0.35), transparent 60%);
+      animation-delay: -4s;
+    }
+    @keyframes floatAnim {
+      0%,100% { transform: translate(0,0); }
+      33% { transform: translate(16px,-18px); }
+      66% { transform: translate(-10px,14px); }
+    }
+
+    .hero-ornament {
+      width: 1px; height: 60px;
+      background: linear-gradient(to bottom,var(--accent3),transparent);
+      opacity: 0.6;
+      margin-bottom: 24px;
+    }
+    .hero-greeting {
+      font-size: 11px;
+      letter-spacing: 5px;
+      text-transform: uppercase;
+      color: var(--accent2);
+      margin-bottom: 18px;
+    }
+    .hero-name {
+      font-family: 'Dancing Script', cursive;
+      font-size: clamp(46px, 10vw, 96px);
+      font-weight: 700;
+      line-height: 1.05;
+      color: var(--accent2);
+      margin-bottom: 10px;
+    }
+    .hero-subtitle {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 18px;
+      font-style: italic;
+      color: var(--muted);
+      margin-bottom: 30px;
+    }
+    .hero-title {
+      font-size: 11px;
+      font-weight: 400;
+      letter-spacing: 6px;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 40px;
+  white-space: nowrap;
+  overflow: hidden;
+  position: relative;
+  display: block; /* ← IMPORTANTISSIMO */
+    }
+
+    .hero-title-marquee {
+  display: none;
+}
+
+    
+    .hero-divider {
+      width: 46px; height: 1px;
+      background: linear-gradient(90deg,var(--accent),var(--accent2),var(--accent3));
+      margin-bottom: 32px;
+    }
+    .hero-bio {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(18px, 2.4vw, 22px);
+      line-height: 1.8;
+      max-width: 620px;
+      color: var(--muted);
+    }
+    .hero-cta {
+      margin-top: 44px;
+      display: flex; flex-wrap: wrap; gap: 14px;
+      justify-content: center;
+    }
+    .btn-elegant {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 13px 28px;
+      border: 1px solid var(--accent);
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--accent);
+      text-decoration: none;
+      position: relative;
+      overflow: hidden;
+      background: transparent;
+      cursor: pointer;
+      transition: color 0.45s cubic-bezier(0.22,1,0.36,1), border-color 0.45s;
+    }
+    .btn-elegant::before {
+      content: '';
+      position: absolute; inset: 0;
+      background: linear-gradient(90deg,var(--accent),var(--accent2));
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.45s cubic-bezier(0.22,1,0.36,1);
+      z-index: -1;
+    }
+    .btn-elegant:hover::before { transform: scaleX(1); }
+    .btn-elegant:hover { color: var(--cream); border-color: transparent; }
+
+    .btn-filled {
+      background: linear-gradient(90deg,var(--accent),var(--accent2));
+      color: var(--cream);
+      border-color: transparent;
+    }
+    .btn-filled::before {
+      background: linear-gradient(90deg,var(--accent2),var(--accent3));
+    }
+
+    @keyframes scrollPulse {
+      0%,100% { opacity: 0.3; transform: scaleY(0.6); }
+      50% { opacity: 1; transform: scaleY(1); }
+    }
+
+    /* SECTIONS */
+    .section-wrapper {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 48px;
+    }
+    section { padding: 110px 0; }
+
+    .section-header {
+      display: flex; align-items: center; gap: 18px;
+      margin-bottom: 46px;
+    }
+    .section-num {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 14px;
+      color: var(--accent2);
+      font-style: italic;
+    }
+    .section-line {
+      flex: 0 0 40px;
+      height: 1px;
+      background: var(--border);
+    }
+    .section-title {
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    /* CATEGORIES GRID (Fiori, Animali, ecc.) */
+    .categories-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0,1fr));
+      gap: 24px;
+    }
+    .category-card {
+      background: var(--cream);
+      border: 1px solid var(--border);
+      padding: 22px 20px 24px;
+      position: relative;
+      overflow: hidden;
+      cursor: pointer;
+      transition: transform 0.45s cubic-bezier(0.22,1,0.36,1), box-shadow 0.45s, border-color 0.45s;
+      text-decoration: none;
+      color: inherit;
+      display: block;
+    }
+
+    .category-card::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at 0 0, rgba(196,106,203,0.12), transparent 55%);
+      opacity: 0;
+      transition: opacity 0.45s;
+      pointer-events: none;
+    }
+    .category-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 18px 40px rgba(0,0,0,0.06);
+      border-color: rgba(196,106,203,0.4);
+    }
+    .category-card:hover::before { opacity: 1; }
+    .category-label {
+      font-size: 10px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--accent2);
+      margin-bottom: 10px;
+    }
+    .category-name {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 22px;
+      margin-bottom: 8px;
+    }
+    .category-desc {
+      font-size: 13px;
+      line-height: 1.7;
+      color: var(--muted);
+    }
+    .category-pill {
+      position: absolute;
+      top: 16px; right: 16px;
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      padding: 4px 10px;
+      border-radius: 999px;
+      background: rgba(255,159,60,0.12);
+      color: var(--accent2);
+    }
+
+    .category-card::after {
+  content: '→';
+  position: absolute;
+  bottom: 14px;
+  right: 16px;
+  font-size: 16px;
+  color: var(--accent2);
+  opacity: 0.55;
+  transition: opacity 0.3s, transform 0.3s;
+}
+
+.category-card:hover::after {
+  opacity: 1;
+  transform: translateX(4px);
+}
+
+
+   /* ABOUT */
+.about-section {
+  background: var(--dark);
+  color: var(--cream);
+}
+
+.about-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 48px;
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 70px;
+  align-items: center;
+}
+
+/* HEADER */
+.about-left .section-header { margin-bottom: 26px; }
+
+/* NUMERO SEZIONE — ORO */
+.about-left .section-num {
+  color: var(--giallo);
+}
+
+/* LINEA — ORO → ARANCIONE */
+.about-left .section-line {
+  background: linear-gradient(90deg, var(--giallo), var(--arancio));
+}
+
+/* TITOLO — ORO tenue */
+.about-left .section-title {
+  color: rgba(255, 217, 74, 0.65);
+}
+
+/* QUOTE — bianco elegante */
+.about-quote {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(26px, 3.4vw, 38px);
+  font-style: italic;
+  line-height: 1.5;
+  color: var(--cream);
+}
+
+/* PAROLE EVIDENZIATE — ORO */
+.about-quote .gold {
+  color: var(--giallo);
+}
+
+/* TESTO A DESTRA — bianco morbido */
+.about-right p {
+  font-size: 15px;
+  line-height: 1.9;
+  color: rgba(255, 255, 255, 0.75);
+  margin-bottom: 18px;
+}
+
+/* STATISTICHE */
+.about-stats {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0,1fr));
+  gap: 22px;
+  margin-top: 34px;
+  padding-top: 26px;
+  border-top: 1px solid rgba(255, 217, 74, 0.35);
+}
+
+.stat-item { text-align: center; }
+
+/* NUMERI — ORO pieno */
+.stat-num {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 34px;
+  font-weight: 300;
+  color: var(--giallo);
+  margin-bottom: 6px;
+}
+
+/* LABEL — ORO tenue */
+.stat-label {
+  font-size: 10px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: rgba(255, 217, 74, 0.55);
+}
+
+
+    /* CONTACT */
+    .contact-section {
+      padding: 130px 0 80px;
+      text-align: center;
+    }
+    .contact-ornament {
+      width: 1px; height: 60px;
+      background: linear-gradient(to bottom,transparent,var(--accent));
+      margin: 0 auto 32px;
+      opacity: 0.6;
+    }
+    .contact-heading {
+      font-family: 'Dancing Script', cursive;
+      font-size: clamp(40px, 8vw, 80px);
+      font-weight: 700;
+      color: var(--accent);
+      margin-bottom: 16px;
+      line-height: 1.1;
+    }
+    .contact-sub {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 20px;
+      font-style: italic;
+      color: var(--muted);
+      margin-bottom: 40px;
+    }
+    .contact-email,
+    .contact-phone {
+      display: inline-block;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 18px;
+      color: var(--accent);
+      text-decoration: none;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 3px;
+      margin: 6px 12px;
+      transition: border-color 0.3s, color 0.3s;
+    }
+    .contact-email:hover,
+    .contact-phone:hover {
+      border-color: var(--accent2);
+      color: var(--accent2);
+    }
+
+    .contact-row {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px; /* distanza tra icona e testo */
+  margin: 6px 12px;
+}
+
+.contact-icon {
+  width: 22px;
+  height: 22px;
+  object-fit: contain;
+  opacity: 0.85;
+  transition: opacity 0.3s, transform 0.3s;
+}
+
+.contact-row:hover .contact-icon {
+  opacity: 1;
+  transform: scale(1.08);
+}
+
+    /* FOOTER */
+    footer {
+      padding: 26px 48px 32px;
+      border-top: 1px solid var(--border);
+      display: flex; justify-content: space-between; align-items: center;
+      font-size: 11px;
+      color: var(--muted);
+      letter-spacing: 1px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+    footer .footer-brand {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 14px;
+      font-style: italic;
+    }
+
+
+    /* SERVICES */
+    .services-list { list-style: none; }
+    .services-list li {
+      padding: 36px 0;
+      border-bottom: 1px solid var(--border);
+      display: grid;
+      grid-template-columns: 40px 1fr auto;
+      align-items: center;
+      gap: 24px;
+      opacity: 0; transform: translateY(40px);
+      transition: opacity 0.7s, transform 0.7s cubic-bezier(0.22,1,0.36,1);
+      cursor: default;
+    }
+    .services-list li:first-child {
+      border-top: 1px solid var(--border);
+    }
+    .services-list li.visible { opacity: 1; transform: translateY(0); }
+    .services-list li .svc-num {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 14px;
+      font-style: italic;
+      color: var(--gold);
+      text-transform: uppercase;
+    }
+    .services-list li .svc-name {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(24px, 3vw, 38px);
+      font-weight: 400;
+      transition: color 0.3s, padding-left 0.5s cubic-bezier(0.22,1,0.36,1);
+    }
+    .services-list li:hover .svc-name {
+      padding-left: 16px;
+      color: var(--accent);
+    }
+    .services-list li .svc-tag {
+      font-size: 10px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    /* GALLERY */
+    .gallery-section {
+      padding: 120px 0;
+      overflow: hidden;
+      background: var(--bg2);
+    }
+    .gallery-section .section-wrapper { margin-bottom: 48px; }
+    .marquee-wrap { overflow: hidden; }
+    .marquee-track {
+      display: flex;
+      gap: 20px;
+      animation: marquee 65s linear infinite;
+      width: max-content;
+    }
+    .marquee-img-wrap {
+      position: relative;
+      overflow: hidden;
+      flex-shrink: 0;
+    }
+    .marquee-img-wrap::after {
+      content: '';
+      position: absolute; inset: 0;
+      border: 1px solid rgba(255,217,74,0.25); /* oro soft */
+      pointer-events: none;
+    }
+
+    .marquee-track img {
+      height: 340px;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.6s cubic-bezier(0.22,1,0.36,1), filter 0.5s;
+      filter: saturate(1);
+    }
+
+    .marquee-img-wrap:hover img {
+      transform: scale(1.04);
+      filter: saturate(1.1);
+    }
+    @keyframes marquee {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+
+
+    /* RESPONSIVE */
+    @media (max-width: 900px) {
+      .nav-links { display: none; }
+      .nav-toggle { display: flex; }
+      .about-inner { grid-template-columns: 1fr; gap: 40px; padding: 0 28px; }
+      .section-wrapper { padding: 0 28px; }
+      .categories-grid { grid-template-columns: repeat(2,minmax(0,1fr)); }
+    }
+    @media (max-width: 700px) {
+      nav { padding: 18px 22px; }
+      nav.scrolled { padding: 14px 22px; }
+      .hero { padding: 130px 22px 80px; }
+      .section-wrapper { padding: 0 22px; }
+      section { padding: 80px 0; }
+      .categories-grid { grid-template-columns: 1fr; }
+      footer { padding: 22px; flex-direction: column; gap: 8px; text-align: center; }
+      .scroll-indicator { display: none; }
+    }
+
+ /* DESKTOP: nascondo la riga delle icone */
+.contact-icons-mobile {
+  display: none;
+}
+
+/* MOBILE: solo icone nei contatti */
+@media (max-width: 768px) {
+
+  /* Mostro SOLO la riga delle icone */
+  .contact-icons-mobile {
+    display: flex;
+    justify-content: center;
+    gap: 22px;
+    margin-top: 28px;
+  }
+
+  /* Nascondo testo email/telefono/whatsapp/facebook */
+  .contact-email,
+  .contact-phone {
+    display: none;
+  }
+
+  /* Rendo le righe più compatte */
+  .contact-row {
+    display: none; /* nasconde completamente le righe sotto */
+  }
+
+  /* Icone più grandi e centrali */
+  .contact-icon {
+    width: 42px;
+    height: 42px;
+    opacity: 1;
+    transform: none;
+  }
+
+  .hero-title {
+    display: none;
+  }
+
+  /* Mostro la marquee */
+  .hero-title-marquee {
+    display: block;
+    overflow: hidden;
+    width: 100%;
+    margin-top: 14px;
+  }
+
+  .hero-title-track {
+    display: flex;
+    gap: 40px;
+    width: max-content;
+    animation: heroMarquee 18s linear infinite;
+  }
+
+  .hero-title-track span {
+    white-space: nowrap;
+    font-size: 14px;
+    color: var(--accent);
+  }
+
+  @keyframes heroMarquee {
+    0%   { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+
+  .section-title {
+    font-size: 8.5px;
+    letter-spacing: 2px;
+    white-space: nowrap;
+  }
+
+  .services-list li .svc-name {
+    font-size: 16px;        /* più piccolo ma ancora elegante */
+    line-height: 1.3;       /* più compatto */
+    letter-spacing: 1px;    /* meno spazio tra le lettere */
+  }
+
+  .services-list li {
+    grid-template-columns: 34px 1fr auto; /* non troppo stretto */
+    gap: 16px; /* più arioso */
+  }
+
+  .svc-tag {
+    font-size: 6px;         /* leggero ritocco */
+    letter-spacing: 0.4px;
+  }
+
+  .contact-section{
+    margin-top: 0.5px;
+  }
+
+  .services-list li {
+    padding: 20px 0;   /* o 16px, o 12px… scegli tu */
+    gap: 16px;
+  }
+}
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav id="nav">
+    <div class="nav-logo">Le coin de l’<span>artiste</span></div>
+    <div class="nav-right">
+      <ul class="nav-links">
+        <li><a href="#hero">Home</a></li>
+        <li><a href="#fiori">Fiori</a></li>
+        <li><a href="#animali">Animali</a></li>
+        <li><a href="#fuori-porta">Fuori porta</a></li>
+        <li><a href="#fuori-porta">Addobbi natalizi</a></li>
+        <li><a href="#fuori-porta">Fiocchi nascita</a></li>
+        <li><a href="#fuori-porta">Oggettistica casa</a></li>
+        <li><a href="#contatti">Contatti</a></li>
+      </ul>
+      <div class="nav-toggle" id="navToggle">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- MENU OVERLAY (mobile) -->
+  <div class="menu-overlay" id="menuOverlay">
+    <ul class="menu-links">
+      <li><a href="#hero" onclick="closeMenu()">Home</a></li>
+      <li><a href="#fiori" onclick="closeMenu()">Fiori</a></li>
+      <li><a href="#animali" onclick="closeMenu()">Animali</a></li>
+      <li><a href="#fuori-porta" onclick="closeMenu()">Fuori porta</a></li>
+      <li><a href="#fuori-porta" onclick="closeMenu()">Addobbi natalizi</a></li>
+      <li><a href="#fuori-porta" onclick="closeMenu()">Fiocchi nascita</a></li>
+      <li><a href="#fuori-porta" onclick="closeMenu()">Oggettistica casa</a></li>
+      <li><a href="#contatti" onclick="closeMenu()">Contatti</a></li>
+    </ul>
+  </div>
+
+  <!-- HERO -->
+  <section class="hero" id="hero">
+    <div class="float-circle"></div>
+    <div class="float-circle"></div>
+
+    <div class="hero-ornament"></div>
+    <img src="https://i.postimg.cc/tR8dr80F/Logo-Maria.png" alt="Logo Maria Pia" class="hero-logo">
+    <h1 class="hero-name">Le coin de l’artiste</h1>
+    <p class="hero-subtitle">Le creazioni in feltro e pannolenci di Maria Pia</p>
+    <p class="hero-title">
+  Fiori · Animali · Fuori porta · Addobbi · Fiocchi nascita · Oggettistica casa
+</p>
+
+<div class="hero-title-marquee">
+  <div class="hero-title-track">
+    <span>Fiori · Animali · Fuori porta · Addobbi · Fiocchi nascita · Oggettistica casa</span>
+    <span>Fiori · Animali · Fuori porta · Addobbi · Fiocchi nascita · Oggettistica casa</span>
+  </div>
+</div>
+
+</div>
+
+    <div class="hero-divider"></div>
+    <p class="hero-bio">
+      Piccole storie di stoffa, filo e colore: ogni fiore, ogni animaletto, ogni fuori porta nasce dalle mani di Maria Pia,
+      che trasforma il feltro e il pannolenci in oggetti unici, pensati per scaldare la casa e il cuore.
+      Creazioni tailor made su richiesta del cliente  e da kit della Merceria Creativa
+    </p>
+    <div class="hero-cta">
+      <a class="btn-elegant btn-filled" href="#fiori">Scopri le creazioni</a>
+      <a class="btn-elegant" href="#contatti">Scrivi a Maria Pia</a>
+    </div>
+  </section>
+
+<section class="gallery-section" id="gallery">
+  <div class="section-wrapper">
+    <div class="section-header">
+      <span class="section-num">01</span>
+      <div class="section-line"></div>
+      <span class="section-title">Alcune creazioni di Maria Pia</span>
+    </div>
+  </div>
+
+  <div class="marquee-wrap">
+  <div class="marquee-track">
+
+    <!-- SEQUENZA 1 -->
+    <div class="marquee-img-wrap"><img src="https://i.postimg.cc/dDM088x7/Img1.jpg" alt=""></div>
+    <div class="marquee-img-wrap"><img src="https://i.postimg.cc/yWqNFFbg/Img2.jpg" alt=""></div>
+
+    <div class="marquee-img-wrap"><img src="https://i.postimg.cc/fR4Pfxj9/Img21.jpg" alt=""></div>
+
+    <div class="marquee-img-wrap"><img src="https://i.postimg.cc/BtWvxxV1/Img3.jpg" alt=""></div>
+    <div class="marquee-img-wrap"><img src="https://i.postimg.cc/w3KBhhGR/Img4.jpg" alt=""></div>
+    <div class="marquee-img-wrap"><img src="https://i.postimg.cc/z3mfnncw/Img5.jpg" alt=""></div>
+    <div class="marquee-img-wrap"><img src="https://i.postimg.cc/Z0kqrrMF/Img6.jpg" alt=""></div>
+    <div class="marquee-img-wrap"><img src="https://i.postimg.cc/23p544KG/Img7.jpg" alt=""></div>
+    <div class="marquee-img-wrap"><img src="https://i.postimg.cc/hhFG9951/Img8.jpg" alt=""></div>
+    <div class="marquee-img-wrap"><img src="https://i.postimg.cc/MXkGyyFF/Img9.jpg" alt=""></div>
+    <div class="marquee-img-wrap"><img src="https://i.postimg.cc/7YvjdQDy/Compagnetti10.jpg" alt=""></div>
+    <div class="marquee-img-wrap"><img src="https://i.postimg.cc/y6DXysGK/Img11.jpg" alt=""></div>
+    <div class="marquee-img-wrap"><img src="https://i.postimg.cc/DfSdPnNF/Img12.jpg" alt=""></div>
+    <div class="marquee-img-wrap"><img src="https://i.postimg.cc/bYZH9p5q/Img13.jpg" alt=""></div>
+    <div class="marquee-img-wrap"><img src="https://i.postimg.cc/fWVjfDPz/Img14.jpg" alt=""></div>
+    <div class="marquee-img-wrap"><img src="https://i.postimg.cc/Wpd6wTyz/Img15.jpg" alt=""></div>
+    <div class="marquee-img-wrap"><img src="https://i.postimg.cc/T2KqJfsP/Img16.jpg" alt=""></div>
+    <div class="marquee-img-wrap"><img src="https://i.postimg.cc/SQn7fkPj/Img17.jpg" alt=""></div>
+    <div class="marquee-img-wrap"><img src="https://i.postimg.cc/SQn7fkP2/Img18.jpg" alt=""></div>
+    <div class="marquee-img-wrap"><img src="https://i.postimg.cc/FFYgVN6J/Img19.jpg" alt=""></div>
+    <div class="marquee-img-wrap"><img src="https://i.postimg.cc/xjXy3nZH/Img20.jpg" alt=""></div>
+	
+	<div class="marquee-img-wrap"><img src="https://i.postimg.cc/gJmfCPw2/IMG-20260513-WA0003.jpg" alt=""></div>
+	<div class="marquee-img-wrap"><img src="https://i.postimg.cc/JhbfYhhy/IMG-20260513-WA0004.jpg" alt=""></div>
+	<div class="marquee-img-wrap"><img src="https://i.postimg.cc/V6m3xcSY/IMG-20260513-WA0005.jpg" alt=""></div>
+	<div class="marquee-img-wrap"><img src="https://i.postimg.cc/XJ4TR0Z5/IMG-20260513-WA0006.jpg" alt=""></div>
+	<div class="marquee-img-wrap"><img src="https://i.postimg.cc/MTqhC8cv/IMG-20260513-WA0007.jpg" alt=""></div>
+	<div class="marquee-img-wrap"><img src="https://i.postimg.cc/PxTBgkLp/IMG-20260513-WA0008.jpg" alt=""></div>
+	<div class="marquee-img-wrap"><img src="https://i.postimg.cc/d1wzbK71/IMG-20260513-WA0009.jpg" alt=""></div>
+	<div class="marquee-img-wrap"><img src="https://i.postimg.cc/76wpFyC7/IMG-20260513-WA0010.jpg" alt=""></div>
+	<div class="marquee-img-wrap"><img src="https://i.postimg.cc/NMBW3wyL/IMG-20260513-WA0011.jpg" alt=""></div>
+	<div class="marquee-img-wrap"><img src="https://i.postimg.cc/NMBW3wyB/IMG-20260513-WA0013.jpg" alt=""></div>
+	<div class="marquee-img-wrap"><img src="https://i.postimg.cc/DZnt9KWX/IMG-20260513-WA0014.jpg" alt=""></div>
+	<div class="marquee-img-wrap"><img src="https://i.postimg.cc/Y9MJ5w4t/IMG-20260513-WA0015.jpg" alt=""></div>
+	<div class="marquee-img-wrap"><img src="https://i.postimg.cc/PxTBgkLC/IMG-20260513-WA0016.jpg" alt=""></div>
+
+    <!-- SEQUENZA 2 (DUPLICATA) -->
+    <div class="marquee-img-wrap"><img src="https://i.postimg.cc/dDM088x7/Img1.jpg" alt=""></div>
+    <div class="marquee-img-wrap"><img src="https://i.postimg.cc/yWqNFFbg/Img2.jpg" alt=""></div>
+    <div class="marquee-img-wrap"><img src="https://i.postimg.cc/BtWvxxV1/Img3.jpg" alt=""></div>
+
+    <div class="marquee-img-wrap"><img src="https://i.postimg.cc/fR4Pfxj9/Img21.jpg" alt=""></div>
+
+    <div class="marquee-img-wrap"><img src="https://i.postimg.cc/w3KBhhGR/Img4.jpg" alt=""></div>
+    <div class="marquee-img-wrap"><img src="https://i.postimg.cc/z3mfnncw/Img5.jpg" alt=""></div>
+    <div class="marquee-img-wrap"><img src="https://i.postimg.cc/Z0kqrrMF/Img6.jpg" alt=""></div>
+    <div class="marquee-img-wrap"><img src="https://i.postimg.cc/23p544KG/Img7.jpg" alt=""></div>
+    <div class="marquee-img-wrap"><img src="https://i.postimg.cc/hhFG9951/Img8.jpg" alt=""></div>
+    <div class="marquee-img-wrap"><img src="https://i.postimg.cc/MXkGyyFF/Img9.jpg" alt=""></div>
+    <div class="marquee-img-wrap"><img src="https://i.postimg.cc/7YvjdQDy/Compagnetti10.jpg" alt=""></div>
+    <div class="marquee-img-wrap"><img src="https://i.postimg.cc/y6DXysGK/Img11.jpg" alt=""></div>
+    <div class="marquee-img-wrap"><img src="https://i.postimg.cc/DfSdPnNF/Img12.jpg" alt=""></div>
+    <div class="marquee-img-wrap"><img src="https://i.postimg.cc/bYZH9p5q/Img13.jpg" alt=""></div>
+    <div class="marquee-img-wrap"><img src="https://i.postimg.cc/fWVjfDPz/Img14.jpg" alt=""></div>
+    <div class="marquee-img-wrap"><img src="https://i.postimg.cc/Wpd6wTyz/Img15.jpg" alt=""></div>
+    <div class="marquee-img-wrap"><img src="https://i.postimg.cc/T2KqJfsP/Img16.jpg" alt=""></div>
+    <div class="marquee-img-wrap"><img src="https://i.postimg.cc/SQn7fkPj/Img17.jpg" alt=""></div>
+    <div class="marquee-img-wrap"><img src="https://i.postimg.cc/SQn7fkP2/Img18.jpg" alt=""></div>
+    <div class="marquee-img-wrap"><img src="https://i.postimg.cc/FFYgVN6J/Img19.jpg" alt=""></div>
+    <div class="marquee-img-wrap"><img src="https://i.postimg.cc/xjXy3nZH/Img20.jpg" alt=""></div>
+	
+	<div class="marquee-img-wrap"><img src="https://i.postimg.cc/gJmfCPw2/IMG-20260513-WA0003.jpg" alt=""></div>
+	<div class="marquee-img-wrap"><img src="https://i.postimg.cc/JhbfYhhy/IMG-20260513-WA0004.jpg" alt=""></div>
+	<div class="marquee-img-wrap"><img src="https://i.postimg.cc/V6m3xcSY/IMG-20260513-WA0005.jpg" alt=""></div>
+	<div class="marquee-img-wrap"><img src="https://i.postimg.cc/XJ4TR0Z5/IMG-20260513-WA0006.jpg" alt=""></div>
+	<div class="marquee-img-wrap"><img src="https://i.postimg.cc/MTqhC8cv/IMG-20260513-WA0007.jpg" alt=""></div>
+	<div class="marquee-img-wrap"><img src="https://i.postimg.cc/PxTBgkLp/IMG-20260513-WA0008.jpg" alt=""></div>
+	<div class="marquee-img-wrap"><img src="https://i.postimg.cc/d1wzbK71/IMG-20260513-WA0009.jpg" alt=""></div>
+	<div class="marquee-img-wrap"><img src="https://i.postimg.cc/76wpFyC7/IMG-20260513-WA0010.jpg" alt=""></div>
+	<div class="marquee-img-wrap"><img src="https://i.postimg.cc/NMBW3wyL/IMG-20260513-WA0011.jpg" alt=""></div>
+	<div class="marquee-img-wrap"><img src="https://i.postimg.cc/NMBW3wyB/IMG-20260513-WA0013.jpg" alt=""></div>
+	<div class="marquee-img-wrap"><img src="https://i.postimg.cc/DZnt9KWX/IMG-20260513-WA0014.jpg" alt=""></div>
+	<div class="marquee-img-wrap"><img src="https://i.postimg.cc/Y9MJ5w4t/IMG-20260513-WA0015.jpg" alt=""></div>
+	<div class="marquee-img-wrap"><img src="https://i.postimg.cc/PxTBgkLC/IMG-20260513-WA0016.jpg" alt=""></div>
+
+
+  </div>
+</div>
+</section>
+
+  <!-- CATEGORIE PRINCIPALI -->
+  <section id="fiori">
+    <div class="section-wrapper">
+      <div class="section-header">
+        <span class="section-num">02</span>
+        <div class="section-line"></div>
+        <span class="section-title">Fiori in feltro</span>
+      </div>
+      <div class="categories-grid">
+        <a href="bouquet-tavolo.html" class="category-card">
+  <span class="category-pill">Bouquet</span>
+  <div class="category-label">Fiori</div>
+  <h3 class="category-name">Bouquet da tavolo</h3>
+  <p class="category-desc">
+    Composizioni floreali in feltro e pannolenci, perfette per centrotavola, angoli lettura e piccoli regali
+    che non appassiscono mai.
+  </p>
+</a>
+
+        <a href="ghirlande-fiorite.html" class="category-card">
+  <span class="category-pill">Ghirlande</span>
+  <div class="category-label">Fiori</div>
+  <h3 class="category-name">Ghirlande fiorite</h3>
+  <p class="category-desc">
+    Corone di fiori morbidi, da appendere alla porta o alle pareti per dare un benvenuto delicato e colorato.
+  </p>
+</a>
+
+        <a href="piccoli-dettagli.html" class="category-card">
+  <span class="category-pill">Dettagli</span>
+  <div class="category-label">Fiori</div>
+  <h3 class="category-name">Piccoli dettagli</h3>
+  <p class="category-desc">
+    Singoli fiori, rametti e foglie da usare come segnaposto, chiudi-pacco o piccoli pensieri personalizzati.
+  </p>
+</a>
+
+      </div>
+    </div>
+  </section>
+
+  <section id="animali">
+    <div class="section-wrapper">
+      <div class="section-header">
+        <span class="section-num">03</span>
+        <div class="section-line"></div>
+        <span class="section-title">Animali</span>
+      </div>
+      <div class="categories-grid">
+        <a href="compagni-stanza.html" class="category-card">
+  <span class="category-pill">Dolcezza</span>
+  <div class="category-label">Animali</div>
+  <h3 class="category-name">Compagni di stanza</h3>
+  <p class="category-desc">
+    Orsetti e coniglietti, morbidi personaggi in feltro, ideali per camerette, culle e angoli gioco.
+  </p>
+</a>
+
+        <a href="animaletti.html" class="category-card">
+  <span class="category-pill">Natura</span>
+  <div class="category-label">Animali</div>
+  <h3 class="category-name">Animaletti</h3>
+  <p class="category-desc">
+    Gufetti, cigni, uccellini, pecore, elefanti.
+  </p>
+</a>
+
+        <a href="personaggi-simpatici.html" class="category-card">
+  <span class="category-pill">Pupotti</span>
+  <div class="category-label">Animali</div>
+  <h3 class="category-name">Personaggi simpatici</h3>
+  <p class="category-desc">
+    Gnomi birichini con cappelli a punta, Babbo Natale, fate incantate e folletti.
+  </p>
+</a>
+
+      </div>
+    </div>
+  </section>
+
+  <section id="fuori-porta">
+    <div class="section-wrapper">
+      <div class="section-header">
+        <span class="section-num">04</span>
+        <div class="section-line"></div>
+        <span class="section-title">Creazioni per Casa e per Occasioni Speciali</span>
+      </div>
+      <div class="categories-grid">
+        <a href="fuori-porta.html" class="category-card">
+  <span class="category-pill">Benvenuto</span>
+  <div class="category-label">Oggetistica</div>
+  <h3 class="category-name">Fuori porta</h3>
+  <p class="category-desc">
+    Fuori porta personalizzati con nomi, frasi e colori su misura, per raccontare chi abita dietro quella porta.
+  </p>
+</a>
+
+        <a href="fiocchi-nascita.html" class="category-card">
+  <span class="category-pill">Occasioni speciali</span>
+  <div class="category-label">Oggetistica</div>
+  <h3 class="category-name">Fiocchi nascita</h3>
+  <p class="category-desc">
+    Fiocchi nascita personalizzati con nome, colori e soggetti scelti dalla famiglia, per dare il benvenuto al nuovo arrivato.
+  </p>
+</a>
+
+        <a href="addobbi-casa.html" class="category-card">
+  <span class="category-pill">Estetica pura</span>
+  <div class="category-label">Oggetistica</div>
+  <h3 class="category-name">Addobbi e oggettistica per la casa</h3>
+  <p class="category-desc">
+    Piccole decorazioni, cuori e casette da aggiungere alle ghirlande o da usare come decoro singolo.
+  </p>
+</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="about-section" id="about">
+    <div class="about-inner">
+      <div class="about-left">
+        <div class="section-header">
+          <span class="section-num">05</span>
+          <div class="section-line"></div>
+          <span class="section-title">Chi è Maria</span>
+        </div>
+        <div class="about-quote">
+          “Ogni creazione nasce da un’idea, da un colore, da un ricordo. Il feltro e il pannolenci
+          diventano il mio modo di raccontare <span class="gold">storie morbide</span>, da portare in casa o da regalare
+          a chi si ama.”
+        </div>
+      </div>
+      <div class="about-right">
+        <p>
+          Maria Pia Torresan realizza a mano ogni pezzo, curando con pazienza i dettagli: dal taglio delle forme
+          alla scelta dei colori, fino alle piccole cuciture che danno vita a fiori, animali e decorazioni.
+        </p>
+        <p>
+          Ogni creazione può essere personalizzata, per adattarsi alla casa, alla persona
+          o all’occasione speciale a cui è destinata.
+        </p>
+        <div class="about-stats">
+          <div class="stat-item">
+            <div class="stat-num">10+</div>
+            <div class="stat-label">Anni di creatività</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-num">100+</div>
+            <div class="stat-label">Creazioni uniche</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-num">∞</div>
+            <div class="stat-label">Idee su misura</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section id="services">
+  <div class="section-wrapper">
+    <div class="section-header">
+      <span class="section-num">06</span>
+      <div class="section-line"></div>
+      <span class="section-title">Perché scegliere Maria Pia</span>
+    </div>
+
+    <ul class="services-list">
+      <li>
+        <span class="svc-num">i</span>
+        <span class="svc-name">Creazioni interamente fatte a mano</span>
+        <span class="svc-tag">cura · precisione</span>
+      </li>
+
+      <li>
+        <span class="svc-num">ii</span>
+        <span class="svc-name">Personalizzazione totale</span>
+        <span class="svc-tag">colori · nomi</span>
+      </li>
+
+      <li>
+        <span class="svc-num">iii</span>
+        <span class="svc-name">Materiali di qualità</span>
+        <span class="svc-tag">feltro · pannolenci</span>
+      </li>
+
+      <li>
+        <span class="svc-num">iv</span>
+        <span class="svc-name">Stile unico e riconoscibile</span>
+        <span class="svc-tag">dolcezza · armonia</span>
+      </li>
+
+      <li>
+        <span class="svc-num">v</span>
+        <span class="svc-name">Regali perfetti per ogni occasione</span>
+        <span class="svc-tag">nascite · feste · casa</span>
+      </li>
+    </ul>
+  </div>
+</section>
+
+  <!-- CONTATTI -->
+  <section class="contact-section" id="contatti">
+    <div class="section-wrapper">
+      <div class="contact-ornament"></div>
+      <h2 class="contact-heading">Parliamo della tua idea</h2>
+      <p class="contact-sub">
+        Per richieste, personalizzazioni o informazioni sulle creazioni, puoi contattare direttamente Maria Pia.
+      </p>
+
+      <div class="contact-icons-mobile">
+  <a href="https://mail.google.com/mail/?view=cm&fs=1&to=m.p.torresan@gmail.com" target="_blank">
+    <img src="https://i.postimg.cc/1Rb0WbxN/Logo-Gmail.png" class="contact-icon" alt="">
+  </a>
+
+  <a href="tel:+393421632700" target="_blank">
+    <img src="https://i.postimg.cc/ZYWFx4QP/Logo-Chiamata.png" class="contact-icon" alt="">
+  </a>
+
+  <a href="https://wa.me/393421632700" target="_blank">
+    <img src="https://i.postimg.cc/v84LtbKh/Logo-Whats-App.png" class="contact-icon" alt="">
+  </a>
+
+  <a href="https://www.facebook.com/profile.php?id=61556707804117" target="_blank">
+    <img src="https://i.postimg.cc/T2KqJfsq/Logo-Facebook.png" class="contact-icon" alt="">
+  </a>
+</div>
+
+
+
+      <div class="contact-row">
+  <img src="https://i.postimg.cc/1Rb0WbxN/Logo-Gmail.png" class="contact-icon" alt="">
+  <a class="contact-email" href="https://mail.google.com/mail/?view=cm&fs=1&to=m.p.torresan@gmail.com" target="_blank">m.p.torresan@gmail.com</a>
+</div>
+
+<div class="contact-row">
+  <img src="https://i.postimg.cc/ZYWFx4QP/Logo-Chiamata.png" class="contact-icon" alt="Chiama">
+  <a class="contact-phone" href="tel:+393421632700" target="_blank">+39 342 1632700</a>
+</div>
+
+<div class="contact-row">
+  <img src="https://i.postimg.cc/v84LtbKh/Logo-Whats-App.png" class="contact-icon" alt="WhatsApp">
+  <a class="contact-phone" href="https://wa.me/393421632700" target="_blank">+39 342 1632700</a>
+</div>
+
+<div class="contact-row">
+  <img src="https://i.postimg.cc/T2KqJfsq/Logo-Facebook.png" class="contact-icon" alt="Facebook">
+  <a class="contact-phone" href="https://www.facebook.com/profile.php?id=61556707804117" target="_blank">Maria Pia Torresan</a>
+</div>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-brand">©Le coin de l’artiste – Maria Pia</div>
+    <div>Feltro &amp; pannolenci · Creazioni artigianali</div>
+  </footer>
+
+  <script>
+  // --- LOADER ---
+  window.addEventListener('load', () => {
+    setTimeout(() => document.getElementById('loader').classList.add('done'), 1200);
+  });
+
+  // --- NAV SCROLL ---
+  window.addEventListener('scroll', () => {
+    document.getElementById('nav').classList.toggle('scrolled', window.scrollY > 60);
+  });
+
+  // --- MENU MOBILE ---
+  const navToggle = document.getElementById('navToggle');
+  const menuOverlay = document.getElementById('menuOverlay');
+  let menuOpen = false;
+
+  navToggle.addEventListener('click', () => {
+    menuOpen = !menuOpen;
+    navToggle.classList.toggle('active', menuOpen);
+    menuOverlay.classList.toggle('open', menuOpen);
+    document.body.style.overflow = menuOpen ? 'hidden' : '';
+  });
+
+  function closeMenu() {
+    menuOpen = false;
+    navToggle.classList.remove('active');
+    menuOverlay.classList.remove('open');
+    document.body.style.overflow = '';
+  }
+
+  // --- SMOOTH SCROLL ---
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', function(e) {
+      e.preventDefault();
+      const t = document.querySelector(this.getAttribute('href'));
+      if (t) t.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      closeMenu();
+    });
+  });
+
+  // --- SCROLL REVEAL ---
+  const revealObs = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) e.target.classList.add('visible');
+    });
+  }, { threshold: 0.12 });
+
+  document.querySelectorAll(
+    '.services-list li, .category-card, .about-quote, .about-right, .contact-heading, .contact-ornament'
+  ).forEach(el => revealObs.observe(el));
+
+  // --- PARALLAX FLOAT ---
+  window.addEventListener('scroll', () => {
+    const scrolled = window.scrollY;
+    document.querySelectorAll('.float-circle').forEach((c, i) => {
+      c.style.transform = `translateY(${scrolled * (i % 2 === 0 ? 0.05 : -0.03)}px)`;
+    });
+  });
+
+  // --- COUNTER ANIMATION ---
+const countObs = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.querySelectorAll('.stat-num').forEach(num => {
+
+        const raw = num.textContent.trim();
+
+        // Se NON ci sono numeri → lascia tutto così (∞)
+        if (!/[0-9]/.test(raw)) {
+          num.textContent = raw; // nessuna animazione
+          return;
+        }
+
+        // Se ci sono numeri → animazione normale
+        const target = parseInt(raw);
+        const suffix = raw.replace(/[0-9]/g, '');
+        let current = 0;
+        const step = Math.max(1, Math.floor(target / 40));
+
+        const timer = setInterval(() => {
+          current += step;
+          if (current >= target) {
+            current = target;
+            clearInterval(timer);
+          }
+          num.textContent = current + suffix;
+        }, 30);
+      });
+
+      countObs.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.5 });
+
+const statsEl = document.querySelector('.about-stats');
+if (statsEl) countObs.observe(statsEl);
+</script>
+
+</body>
+</html>
